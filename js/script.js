@@ -14,6 +14,13 @@ $(document).on('click', '.item[data-role="result-item"]', function () {
     $(this).parent().removeClass('active');
 });
 
+$(document).mouseup(function (e){
+    var div = $(".search-real-time-wrap");
+    if (!div.is(e.target) && div.has(e.target).length === 0) {
+        $('.search-real-time-wrap').removeClass('active');
+    }
+});
+
 var words_list = [
     "a",
     "ability",
